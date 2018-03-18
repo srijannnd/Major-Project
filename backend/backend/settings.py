@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'authentication',
     'rest_framework',
     'corsheaders',
+    'vdoc',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'backend.urls'
 
-# Rest Framework
+
 REST_FRAMEWORK = {
     'EXCEPTION_HANDLER': 'authentication.exceptions.core_exception_handler',
     'NON_FIELD_ERRORS_KEY': 'error',
@@ -135,3 +136,5 @@ STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'authentication.User'
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+# AUTHENTICATION_BACKENDS = ['authentication.backends.JWTAuthentication']
