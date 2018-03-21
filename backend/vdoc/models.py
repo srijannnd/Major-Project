@@ -10,7 +10,6 @@ class Symptoms(models.Model):
 
 class Issues(models.Model):
     id = models.IntegerField(primary_key=True)
-    description = models.TextField(blank=True)
     name = models.CharField(blank=True, max_length=200)
 
 
