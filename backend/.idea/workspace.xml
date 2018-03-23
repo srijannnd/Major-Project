@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d4baa87-afe0-4d61-97f8-ec7e619c1c75" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/vdoc/helpers/dictionary.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vdoc/migrations/0004_auto_20180323_0821.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vdoc/migrations/0005_auto_20180323_1029.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vdoc/migrations/0006_auto_20180323_1103.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vdoc/migrations/0007_auto_20180323_1104.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vdoc/migrations/0008_auto_20180323_1801.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vdoc/migrations/0009_auto_20180323_1802.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vdoc/migrations/0010_issues_description.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/vdoc/helpers/save_data.py" afterPath="$PROJECT_DIR$/vdoc/helpers/save_data.py" />
-      <change beforePath="$PROJECT_DIR$/vdoc/models.py" afterPath="$PROJECT_DIR$/vdoc/models.py" />
       <change beforePath="$PROJECT_DIR$/vdoc/views.py" afterPath="$PROJECT_DIR$/vdoc/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,11 +55,20 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vdoc/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+            <state relative-caret-position="181">
+              <caret line="130" column="17" lean-forward="true" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vdoc_issues" pinned="false" current-in-tab="false">
+        <entry file="das://table:/8befbb7e/6e521006-ce4b-4dc3-8a79-75658bdf307e/main.vdoc_issues">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -390,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521656888212</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="call-from-db">
+      <created>1521818298390</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1521818298390</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -418,7 +423,7 @@
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3421462" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.525661" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -467,7 +472,8 @@
     <MESSAGE value="list-view-api" />
     <MESSAGE value="issue-description" />
     <MESSAGE value="api-updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="api-updated" />
+    <MESSAGE value="call-from-db" />
+    <option name="LAST_COMMIT_MESSAGE" value="call-from-db" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -478,7 +484,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="50" />
+      <option name="time" value="55" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -774,13 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/8befbb7e/6e521006-ce4b-4dc3-8a79-75658bdf307e/main.vdoc_issues">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vdoc/helpers/save_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -830,10 +829,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/8befbb7e/6e521006-ce4b-4dc3-8a79-75658bdf307e/main.vdoc_issues">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vdoc/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+        <state relative-caret-position="181">
+          <caret line="130" column="17" lean-forward="true" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
