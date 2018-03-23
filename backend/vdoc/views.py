@@ -8,28 +8,8 @@ from vdoc.helpers import PriaidDiagnosisClient
 from vdoc.helpers.config import *
 from vdoc.helpers.save_data import save_data_helper
 from vdoc.serializers import *
-from vdoc.helpers.PriaidDiagnosisClient import SelectorStatus, Gender
+from vdoc.helpers.dictionary import selector_status_dict, gender_dict
 # Create your views here.
-
-gender_dict = {'male': Gender.Male, 'female': Gender.Female}
-selector_status_dict = {'man': SelectorStatus.Man, 'woman': SelectorStatus.Woman,
-                   'boy': SelectorStatus.Boy, 'girl': SelectorStatus.Girl}
-
-
-class SymptomChecker(APIView):
-
-    def post(self, request):
-        data = request.data
-        try:
-            flag, user_id = login_check(data['token'], request.get_host())
-            if flag:
-                result = diagnosis(data)
-                return Response({'flag': flag, 'id': user_id}, status=status.HTTP_200_OK)
-            else:
-                return Response({'user': 'not logged in'}, status=status.HTTP_401_UNAUTHORIZED)
-        except Exception as e:
-            print(e)
-            return Response({'error': e}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class SymptomList(APIView):
@@ -123,8 +103,8 @@ class IssueInfo(APIView):
         try:
             flag, user_id = login_check(data['token'], request.get_host())
             if flag:
-                obj = PriaidDiagnosisClient.DiagnosisClient(username, password, authUrl, language, healthUrl)
-                response = obj.loadIssueInfo(data['issue_id'])
+                issue = Issues.objects.get(id=data['issue_id'])
+                response = eval(issue.description)
                 return Response(response, status=status.HTTP_200_OK)
             else:
                 return Response({'user': 'not logged in'}, status=status.HTTP_401_UNAUTHORIZED)
@@ -160,6 +140,7 @@ class RelatedSymptoms(APIView):
             flag, user_id = login_check(data['token'], request.get_host())
             if flag:
                 obj = PriaidDiagnosisClient.DiagnosisClient(username, password, authUrl, language, healthUrl)
+
                 year = datetime.today().year - data['age']
                 gender = gender_dict[data['gender']]
                 response = obj.loadProposedSymptoms(data['symptoms'], gender, year)
@@ -178,9 +159,12 @@ class BodyLocationRelatedSymptoms(APIView):
         try:
             flag, user_id = login_check(data['token'], request.get_host())
             if flag:
-                obj = PriaidDiagnosisClient.DiagnosisClient(username, password, authUrl, language, healthUrl)
-                selector_status = selector_status_dict[data['selector_status']]
-                response = obj.loadSublocationSymptoms(data['body_sub_location_id'], selector_status)
+                response = []
+                for symptom in Symptoms.objects.all():
+                    if data['selector_status'] in symptom.selector_status.split("#")\
+                            and data['body_sub_location_id'] in map(int, symptom.bodySubLocation.split("#")):
+                        response.append({"ID": symptom.id,
+                                         "Name": symptom.name})
                 return Response(response, status=status.HTTP_200_OK)
             else:
                 return Response({'user': 'not logged in'}, status=status.HTTP_401_UNAUTHORIZED)
