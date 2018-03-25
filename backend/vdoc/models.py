@@ -25,3 +25,10 @@ class Symptoms(models.Model):
     name = models.CharField(blank=True, max_length=200)
     bodySubLocation = models.TextField(default="")
     selector_status = models.TextField(default="")
+
+
+class SymptomRelatedIssue(models.Model):
+    symptom = models.ForeignKey(Symptoms, on_delete=models.CASCADE)
+    gender = models.CharField(max_length=200)
+    issue = models.ForeignKey(Issues, on_delete=models.CASCADE)
+    ranking = models.SmallIntegerField(default=0)

@@ -31,7 +31,6 @@ class RegistrationAPIView(APIView):
 
 class LoginAPIView(APIView):
     permission_classes = (AllowAny,)
-    # renderer_classes = (UserJSONRenderer,)
     serializer_class = LoginSerializer
 
     def post(self, request):

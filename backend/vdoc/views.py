@@ -6,9 +6,9 @@ from authentication.models import *
 from vdoc.helpers.diagnosis import diagnosis
 from vdoc.helpers import PriaidDiagnosisClient
 from vdoc.helpers.config import *
-from vdoc.helpers.save_data import save_data_helper
-from vdoc.serializers import *
+from vdoc.helpers.save_data import save_data_helper, save_symptom_issue_mapping
 from vdoc.helpers.dictionary import selector_status_dict, gender_dict
+from vdoc.models import *
 # Create your views here.
 
 
@@ -19,9 +19,13 @@ class SymptomList(APIView):
         try:
             flag, user_id = login_check(data['token'], request.get_host())
             if flag:
-                symptoms = Symptoms.objects.all()
-                serializer = SymptomSerializer(symptoms, many=True)
-                return Response(serializer.data, status=status.HTTP_200_OK)
+                if data['gender'] == 'male':
+                    symptoms = Symptoms.objects.filter(selector_status__startswith='man').values('id',
+                                                                                                 'name')
+                else:
+                    symptoms = Symptoms.objects.all().values('id',
+                                                             'name')
+                return Response(symptoms, status=status.HTTP_200_OK)
             else:
                 return Response({'user': 'not logged in'}, status=status.HTTP_401_UNAUTHORIZED)
         except Exception as e:
@@ -52,9 +56,8 @@ class IssueList(APIView):
         try:
             flag, user_id = login_check(data['token'], request.get_host())
             if flag:
-                issues = Issues.objects.all()
-                serializer = IssueSerializer(issues, many=True)
-                return Response(serializer.data, status=status.HTTP_200_OK)
+                issues = Issues.objects.all().values('id', 'name')
+                return Response(issues, status=status.HTTP_200_OK)
             else:
                 return Response({'user': 'not logged in'}, status=status.HTTP_401_UNAUTHORIZED)
         except Exception as e:
@@ -69,9 +72,8 @@ class BodyLocationList(APIView):
         try:
             flag, user_id = login_check(data['token'], request.get_host())
             if flag:
-                body_locations = BodyLocations.objects.all()
-                serializer = BodyLocationSerializer(body_locations, many=True)
-                return Response(serializer.data, status=status.HTTP_200_OK)
+                body_locations = BodyLocations.objects.all().values('id', 'name')
+                return Response(body_locations, status=status.HTTP_200_OK)
             else:
                 return Response({'user': 'not logged in'}, status=status.HTTP_401_UNAUTHORIZED)
         except Exception as e:
@@ -86,9 +88,10 @@ class BodySubLocationList(APIView):
         try:
             flag, user_id = login_check(data['token'], request.get_host())
             if flag:
-                body_sub_locations = BodySubLocations.objects.filter(bodyLocation=data['body_location_id'])
-                serializer = BodySubLocationSerializer(body_sub_locations, many=True)
-                return Response(serializer.data, status=status.HTTP_200_OK)
+                body_sub_locations = BodySubLocations.objects.filter(
+                    bodyLocation=data['body_location_id']
+                ).values('id', 'name')
+                return Response(body_sub_locations, status=status.HTTP_200_OK)
             else:
                 return Response({'user': 'not logged in'}, status=status.HTTP_401_UNAUTHORIZED)
         except Exception as e:
@@ -120,6 +123,7 @@ class Diagnosis(APIView):
         try:
             flag, user_id = login_check(data['token'], request.get_host())
             if flag:
+                # response = diagnosis(data['gender'], data['age'], data['symptoms'])
                 response = []
                 obj = PriaidDiagnosisClient.DiagnosisClient(username, password, authUrl, language, healthUrl)
                 year = datetime.today().year - data['age']
@@ -168,6 +172,24 @@ class BodyLocationRelatedSymptoms(APIView):
                             and data['body_sub_location_id'] in map(int, symptom.bodySubLocation.split("#")):
                         response.append({"ID": symptom.id,
                                          "Name": symptom.name})
+                return Response(response, status=status.HTTP_200_OK)
+            else:
+                return Response({'user': 'not logged in'}, status=status.HTTP_401_UNAUTHORIZED)
+        except Exception as e:
+            print(e)
+            return Response({'error': e}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class SaveSymptomIssueMapping(APIView):
+
+    def post(self, request):
+        data = request.data
+        try:
+            flag, user_id = login_check(data['token'], request.get_host())
+            if flag:
+                result = save_symptom_issue_mapping()
+                response = dict()
+                response['status'] = 'data not updated' if result is False else 'data updated successfully'
                 return Response(response, status=status.HTTP_200_OK)
             else:
                 return Response({'user': 'not logged in'}, status=status.HTTP_401_UNAUTHORIZED)

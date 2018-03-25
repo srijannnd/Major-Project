@@ -3,9 +3,7 @@ from vdoc.helpers.config import *
 from vdoc.models import *
 
 
-def diagnosis(data):
-    pass
-
-
-# def token_gen(username, password, authUrl, language, healthUrl):
-#     pass
+def diagnosis(gender, age, symptoms):
+    for symptom in symptoms:
+        issues = SymptomRelatedIssue.objects.filter(symptom=symptom,
+                                                    gender=gender)
