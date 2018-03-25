@@ -123,14 +123,7 @@ class Diagnosis(APIView):
         try:
             flag, user_id = login_check(data['token'], request.get_host())
             if flag:
-                # response = diagnosis(data['gender'], data['age'], data['symptoms'])
-                response = []
-                obj = PriaidDiagnosisClient.DiagnosisClient(username, password, authUrl, language, healthUrl)
-                year = datetime.today().year - data['age']
-                gender = gender_dict[data['gender']]
-                issues_list = obj.loadDiagnosis(data['symptoms'], gender, year)
-                for issue in issues_list:
-                    response.append({"ID": issue['Issue']["ID"], 'Ranking': issue['Issue']['Ranking']})
+                response = diagnosis(data['gender'], data['age'], data['symptoms'])
                 return Response(response, status=status.HTTP_200_OK)
             else:
                 return Response({'user': 'not logged in'}, status=status.HTTP_401_UNAUTHORIZED)

@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d4baa87-afe0-4d61-97f8-ec7e619c1c75" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/dataset_creation.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vdoc/migrations/0011_symptomrelatedissue.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vdoc/migrations/0012_auto_20180325_1229.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vdoc/migrations/0013_symptomrelatedissue.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6e521006-ce4b-4dc3-8a79-75658bdf307e.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/6e521006-ce4b-4dc3-8a79-75658bdf307e.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/authentication/serializers.py" afterPath="$PROJECT_DIR$/authentication/serializers.py" />
-      <change beforePath="$PROJECT_DIR$/authentication/views.py" afterPath="$PROJECT_DIR$/authentication/views.py" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change beforePath="$PROJECT_DIR$/vdoc/helpers/diagnosis.py" afterPath="$PROJECT_DIR$/vdoc/helpers/diagnosis.py" />
-      <change beforePath="$PROJECT_DIR$/vdoc/helpers/save_data.py" afterPath="$PROJECT_DIR$/vdoc/helpers/save_data.py" />
-      <change beforePath="$PROJECT_DIR$/vdoc/models.py" afterPath="$PROJECT_DIR$/vdoc/models.py" />
-      <change beforePath="$PROJECT_DIR$/vdoc/serializers.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vdoc/urls.py" afterPath="$PROJECT_DIR$/vdoc/urls.py" />
       <change beforePath="$PROJECT_DIR$/vdoc/views.py" afterPath="$PROJECT_DIR$/vdoc/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,8 +57,20 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vdoc/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2124">
-              <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+            <state relative-caret-position="247">
+              <caret line="144" column="52" lean-forward="true" selection-start-line="144" selection-start-column="52" selection-end-line="144" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vdoc/helpers/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -79,39 +79,10 @@
       <file leaf-file-name="diagnosis.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vdoc/helpers/diagnosis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="8" column="66" lean-forward="false" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vdoc_symptoms" pinned="false" current-in-tab="false">
-        <entry file="das://table:/8befbb7e/6e521006-ce4b-4dc3-8a79-75658bdf307e/main.vdoc_symptoms">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vdoc/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="save_data.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vdoc/helpers/save_data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="125" column="67" lean-forward="false" selection-start-line="125" selection-start-column="67" selection-end-line="125" selection-end-column="67" />
+            <state relative-caret-position="288">
+              <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
               <folding>
-                <element signature="e#0#46#0" expanded="true" />
+                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -169,8 +140,8 @@
         <option value="$PROJECT_DIR$/vdoc/urls.py" />
         <option value="$PROJECT_DIR$/vdoc/models.py" />
         <option value="$PROJECT_DIR$/vdoc/helpers/save_data.py" />
-        <option value="$PROJECT_DIR$/vdoc/helpers/diagnosis.py" />
         <option value="$PROJECT_DIR$/vdoc/serializers.py" />
+        <option value="$PROJECT_DIR$/vdoc/helpers/diagnosis.py" />
         <option value="$PROJECT_DIR$/vdoc/views.py" />
       </list>
     </option>
@@ -449,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521819523825</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="query-optimized">
+      <created>1521971295530</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1521971295530</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -476,7 +454,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988048" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44945568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28926906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -528,7 +506,8 @@
     <MESSAGE value="api-updated" />
     <MESSAGE value="call-from-db" />
     <MESSAGE value="diagnosis-structure-change" />
-    <option name="LAST_COMMIT_MESSAGE" value="diagnosis-structure-change" />
+    <MESSAGE value="query-optimized" />
+    <option name="LAST_COMMIT_MESSAGE" value="query-optimized" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -539,18 +518,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="71" />
+      <option name="time" value="72" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../major-project-venv/lib/python3.6/site-packages/rest_framework/mixins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="50" column="28" lean-forward="false" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../major-project-venv/lib/python3.6/site-packages/rest_framework/generics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -793,6 +765,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="490" column="0" lean-forward="false" selection-start-line="490" selection-start-column="0" selection-end-line="490" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -803,18 +776,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vdoc/helpers/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/authentication/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="83" column="36" lean-forward="false" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -830,6 +796,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
           <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -837,13 +804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vdoc/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -856,27 +816,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vdoc/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="32" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vdoc/helpers/save_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="125" column="67" lean-forward="false" selection-start-line="125" selection-start-column="67" selection-end-line="125" selection-end-column="67" />
           <folding>
-            <element signature="e#0#46#0" expanded="true" />
+            <element signature="e#0#46#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/8befbb7e/6e521006-ce4b-4dc3-8a79-75658bdf307e/main.vdoc_symptomrelatedissue">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vdoc/helpers/diagnosis.py">
+    <entry file="file://$PROJECT_DIR$/vdoc/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="8" column="66" lean-forward="false" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
+        <state relative-caret-position="252">
+          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -888,19 +849,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vdoc/serializers.py">
+    <entry file="das://table:/8befbb7e/6e521006-ce4b-4dc3-8a79-75658bdf307e/main.vdoc_symptomrelatedissue">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vdoc/helpers/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="32" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
+        <state relative-caret-position="54">
+          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../major-project-venv/lib/python3.6/site-packages/django/template/response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vdoc/helpers/diagnosis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vdoc/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2124">
-          <caret line="5" column="44" lean-forward="true" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-          <folding />
+        <state relative-caret-position="247">
+          <caret line="144" column="52" lean-forward="true" selection-start-line="144" selection-start-column="52" selection-end-line="144" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
