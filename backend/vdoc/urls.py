@@ -14,4 +14,5 @@ urlpatterns = [
     path(r'relatedSymptoms/', RelatedSymptoms.as_view()),
     path(r'bodyLocationRelatedSymptoms/', BodyLocationRelatedSymptoms.as_view()),
     path(r'saveSymptomIssueMapping/', SaveSymptomIssueMapping.as_view()),
+    path(r'reportsList/', ReportsList.as_view()),
 ]

@@ -8,6 +8,7 @@ from vdoc.helpers import PriaidDiagnosisClient
 from vdoc.helpers.config import *
 from vdoc.helpers.save_data import save_data_helper, save_symptom_issue_mapping
 from vdoc.helpers.dictionary import selector_status_dict, gender_dict
+from vdoc.helpers.reportsList import reports_list
 from vdoc.models import *
 # Create your views here.
 
@@ -123,7 +124,10 @@ class Diagnosis(APIView):
         try:
             flag, user_id = login_check(data['token'], request.get_host())
             if flag:
-                response = diagnosis(data['gender'], data['age'], data['symptoms'])
+                response, issues = diagnosis(data['gender'], data['age'], data['symptoms'])
+                Report.objects.create(user=User.objects.get(pk=user_id), gender=data['gender'],
+                                      age=data['age'], symptoms='#'.join(map(str, data['symptoms'])),
+                                      issues='#'.join(map(str, issues)))
                 return Response(response, status=status.HTTP_200_OK)
             else:
                 return Response({'user': 'not logged in'}, status=status.HTTP_401_UNAUTHORIZED)
@@ -183,6 +187,22 @@ class SaveSymptomIssueMapping(APIView):
                 result = save_symptom_issue_mapping()
                 response = dict()
                 response['status'] = 'data not updated' if result is False else 'data updated successfully'
+                return Response(response, status=status.HTTP_200_OK)
+            else:
+                return Response({'user': 'not logged in'}, status=status.HTTP_401_UNAUTHORIZED)
+        except Exception as e:
+            print(e)
+            return Response({'error': e}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class ReportsList(APIView):
+
+    def post(self, request):
+        data = request.data
+        try:
+            flag, user_id = login_check(data['token'], request.get_host())
+            if flag:
+                response = reports_list(user_id)
                 return Response(response, status=status.HTTP_200_OK)
             else:
                 return Response({'user': 'not logged in'}, status=status.HTTP_401_UNAUTHORIZED)

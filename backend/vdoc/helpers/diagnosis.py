@@ -29,4 +29,5 @@ def diagnosis(gender, age, symptoms):
     filtered_issues = list(filter(lambda x: x['weight'] > 5, sorted_issues))
     filtered_issues = filtered_issues[:5] if len(filtered_issues) > 5 else filtered_issues
     data = [{'ID': filtered_issues[i]['ID'], 'Ranking': i+1} for i in range(len(filtered_issues))]
-    return data
+    issues = [issue['ID'] for issue in filtered_issues]
+    return data, issues

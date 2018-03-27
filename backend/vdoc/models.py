@@ -1,5 +1,5 @@
 from django.db import models
-
+from authentication.models import User
 # Create your models here.
 
 
@@ -32,3 +32,12 @@ class SymptomRelatedIssue(models.Model):
     gender = models.CharField(max_length=200)
     issue = models.ForeignKey(Issues, on_delete=models.CASCADE)
     ranking = models.SmallIntegerField(default=0)
+
+
+class Report(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    gender = models.CharField(max_length=200)
+    age = models.SmallIntegerField(blank=True)
+    symptoms = models.TextField(blank=True)
+    issues = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
