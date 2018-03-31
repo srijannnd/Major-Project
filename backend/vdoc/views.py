@@ -125,9 +125,10 @@ class Diagnosis(APIView):
             flag, user_id = login_check(data['token'], request.get_host())
             if flag:
                 response, issues = diagnosis(data['gender'], data['age'], data['symptoms'])
-                Report.objects.create(user=User.objects.get(pk=user_id), gender=data['gender'],
-                                      age=data['age'], symptoms='#'.join(map(str, data['symptoms'])),
-                                      issues='#'.join(map(str, issues)))
+                if len(issues) > 0:
+                    Report.objects.create(user=User.objects.get(pk=user_id), gender=data['gender'],
+                                          age=data['age'], symptoms='#'.join(map(str, data['symptoms'])),
+                                          issues='#'.join(map(str, issues)))
                 return Response(response, status=status.HTTP_200_OK)
             else:
                 return Response({'user': 'not logged in'}, status=status.HTTP_401_UNAUTHORIZED)

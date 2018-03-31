@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d4baa87-afe0-4d61-97f8-ec7e619c1c75" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/backend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vdoc/helpers/reportsList.py" beforeDir="false" afterPath="$PROJECT_DIR$/vdoc/helpers/reportsList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vdoc/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/vdoc/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,11 +53,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vdoc/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="200" lean-forward="true" selection-start-line="200" selection-end-line="200" />
+            <state relative-caret-position="140">
+              <caret line="211" selection-start-line="211" selection-end-line="211" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -68,11 +65,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="vdoc_report" pinned="false" current-in-tab="true">
+        <entry file="das://6e521006-ce4b-4dc3-8a79-75658bdf307e/schema/main/table/vdoc_report">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="reportsList.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vdoc/helpers/reportsList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="36">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -83,8 +89,8 @@
       <file leaf-file-name="diagnosis.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vdoc/helpers/diagnosis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="9" column="79" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="79" />
+            <state relative-caret-position="140">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -454,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522171558418</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="api_structure_changes">
+      <created>1522431106015</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1522431106015</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -472,26 +485,27 @@
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32868218" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32917318" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32137287" />
+      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32761312" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.34681183" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32348368" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.3281493" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32659408" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21912351" />
+      <window_info anchor="bottom" id="Database Console" weight="0.32917318" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24701196" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32988048" />
       <window_info anchor="right" id="SciView" order="4" weight="0.32988048" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.33073324" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5101404" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="manage.py@backend" order="7" weight="0.6687403" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="manage.py@backend" order="7" weight="0.6687403" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,7 +552,8 @@
     <MESSAGE value="query-optimized" />
     <MESSAGE value="diagnose-without-api" />
     <MESSAGE value="report-list-api" />
-    <option name="LAST_COMMIT_MESSAGE" value="report-list-api" />
+    <MESSAGE value="api_structure_changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="api_structure_changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -549,10 +564,41 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="77" />
+      <option name="time" value="78" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/vdoc/helpers/diagnosis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="79" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vdoc/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vdoc/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vdoc/helpers/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../major-project-venv/lib/python3.6/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -573,12 +619,6 @@
           <filtering enabled="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/599f5e22-f43b-46a7-a804-4c0795dca7a9/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c824a26c-e417-4b3b-9038-815bc8415911/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../../major-project-venv/lib/python3.6/site-packages/django/contrib/auth/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -623,9 +663,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py" />
-    <entry file="file://$PROJECT_DIR$/vdoc/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../major-project-venv/lib/python3.6/site-packages/rest_framework/permissions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
@@ -784,9 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataset_creation.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/vdoc/serializers.py" />
     <entry file="das://table:/8befbb7e/6e521006-ce4b-4dc3-8a79-75658bdf307e/main.vdoc_symptoms">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -854,24 +888,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/8befbb7e/6e521006-ce4b-4dc3-8a79-75658bdf307e/main.vdoc_report">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vdoc/helpers/diagnosis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="79" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="79" />
+        <state relative-caret-position="140">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vdoc/helpers/reportsList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="36">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>
@@ -880,11 +907,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vdoc/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="200" lean-forward="true" selection-start-line="200" selection-end-line="200" />
+        <state relative-caret-position="140">
+          <caret line="211" selection-start-line="211" selection-end-line="211" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/8befbb7e/6e521006-ce4b-4dc3-8a79-75658bdf307e/main.vdoc_report">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
