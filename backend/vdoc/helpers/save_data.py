@@ -92,7 +92,7 @@ def save_data_helper():
             'body_location_in_symptoms': body_location_in_symptoms}
 
 
-def save_symptom_issue_mapping():
+def save_symptom_issue_mapping_helper():
     try:
         url_symptom_list = "http://127.0.0.1:8000/api/symptomList/"
         url_diagnosis = "http://127.0.0.1:8000/api/diagnosis/"
@@ -117,10 +117,6 @@ def save_symptom_issue_mapping():
                 }
                 diagnosis_request = requests.post(url_diagnosis, json=json_diagnosis)
                 issue_list = eval(diagnosis_request.content)
-                # issue_id_list = []
-                # for issue in issue_list:
-                #     if 'ID' in issue:
-                #         issue_id_list.append(issue['ID'])
                 if len(issue_list) > 0:
                     for issue in issue_list:
                         issue_obj = Issues.objects.get(id=issue['ID'])

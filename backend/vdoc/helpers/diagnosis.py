@@ -2,7 +2,7 @@ from vdoc.models import *
 from django.db.models import F
 
 
-def diagnosis(gender, age, symptoms):
+def diagnosis_helper(gender, age, symptoms):
     issue_list = []
     for symptom in symptoms:
         issues = list(SymptomRelatedIssue.objects.filter(symptom=symptom,

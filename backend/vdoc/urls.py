@@ -4,15 +4,16 @@ from vdoc.views import *
 app_name = "vdoc"
 
 urlpatterns = [
-    path(r'symptomList/', SymptomList.as_view()),
-    path(r'issueList/', IssueList.as_view()),
-    path(r'bodyLocationList/', BodyLocationList.as_view()),
-    path(r'bodySubLocationList/', BodySubLocationList.as_view()),
-    path(r'saveData/', SaveData.as_view()),
-    path(r'issueInfo/', IssueInfo.as_view()),
-    path(r'diagnosis/', Diagnosis.as_view()),
-    path(r'relatedSymptoms/', RelatedSymptoms.as_view()),
-    path(r'bodyLocationRelatedSymptoms/', BodyLocationRelatedSymptoms.as_view()),
-    path(r'saveSymptomIssueMapping/', SaveSymptomIssueMapping.as_view()),
-    path(r'reportsList/', ReportsList.as_view()),
+    path(r'symptomList/', symptom_list),
+    path(r'issueList/', issue_list),
+    path(r'bodyLocationList/', body_location_list),
+    path(r'bodySubLocationList/', body_sub_location_list),
+    path(r'saveData/', save_data),
+    path(r'issueInfo/', issue_info),
+    path(r'diagnosis/', diagnosis),
+    path(r'relatedSymptoms/', related_symptoms),
+    path(r'bodyLocationRelatedSymptoms/', body_location_related_symptoms),
+    path(r'saveSymptomIssueMapping/', save_symptom_issue_mapping),
+    path(r'reportsList/', reports_list),
+    path(r'commonSymptomsAndIssue/', common_symptoms_and_issues),
 ]
