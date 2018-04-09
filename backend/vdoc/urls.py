@@ -1,5 +1,5 @@
 from django.urls import path
-from vdoc.views import *
+from .views import *
 
 app_name = "vdoc"
 
@@ -11,7 +11,6 @@ urlpatterns = [
     path(r'saveData/', save_data),
     path(r'issueInfo/', issue_info),
     path(r'diagnosis/', diagnosis),
-    path(r'relatedSymptoms/', related_symptoms),
     path(r'bodyLocationRelatedSymptoms/', body_location_related_symptoms),
     path(r'saveSymptomIssueMapping/', save_symptom_issue_mapping),
     path(r'reportsList/', reports_list),

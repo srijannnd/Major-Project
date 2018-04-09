@@ -133,25 +133,6 @@ def diagnosis(request):
 
 
 @api_view(['POST'])
-def related_symptoms(request):
-    data = request.data
-    try:
-        flag, user_id = login_check(data['token'], request.get_host())
-        if flag:
-            obj = PriaidDiagnosisClient.DiagnosisClient(username, password, authUrl, language, healthUrl)
-
-            year = datetime.today().year - data['age']
-            gender = gender_dict[data['gender']]
-            response = obj.loadProposedSymptoms(data['symptoms'], gender, year)
-            return Response(response, status=status.HTTP_200_OK)
-        else:
-            return Response({'user': 'not logged in'}, status=status.HTTP_401_UNAUTHORIZED)
-    except Exception as e:
-        print(e)
-        return Response({'error': e}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-
-@api_view(['POST'])
 def body_location_related_symptoms(request):
     data = request.data
     try:

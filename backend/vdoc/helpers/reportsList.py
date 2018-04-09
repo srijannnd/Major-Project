@@ -4,7 +4,7 @@ from collections import Counter
 
 
 def reports_list_helper(user_id):
-    reports = Report.objects.filter(user=user_id).values()
+    reports = Report.objects.filter(user=user_id).values().order_by('-created_at')
     for report in reports:
         report['symptoms'] = Symptoms.objects.filter(
             id__in=map(int, report['symptoms'].split('#'))).values('id', 'name')
